@@ -1,7 +1,7 @@
 // Theme switcher
 const themeToggle = document.createElement('button');
 themeToggle.className = 'theme-toggle';
-themeToggle.innerHTML = '☀️';
+themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
 document.body.appendChild(themeToggle);
 
 // Set dark mode as default
@@ -11,7 +11,7 @@ document.body.classList.add('dark-mode');
 themeToggle.addEventListener('click', () => {
     isDarkMode = !isDarkMode;
     document.body.classList.toggle('dark-mode');
-    themeToggle.innerHTML = isDarkMode ? '☀️' : '🌙';
+    themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
 });
 
 // Intersection Observer for scroll animations
